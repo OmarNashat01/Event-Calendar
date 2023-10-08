@@ -40,7 +40,7 @@ function EventCalendar() {
                 </div>
                 {eachWeekOfInterval({ start: startOfWeek(currentMonth), end: endOfMonth(currentMonth) }).map((day, index) => {
                     return (
-                        <div key={index} className={`grid grid-cols-4 md:grid-cols-7 min-h-[9rem] ${index === activeWeek ? 'h-fit' : 'h-36'} transition-all duration-700`} onClick={() => setActiveWeek(index)} >
+                        <div key={index} className={`grid grid-cols-1 sm:grid-cols-4 md:grid-cols-7 min-h-[9rem] ${index === activeWeek ? 'h-fit' : 'h-36'} transition-all duration-700`} onClick={() => setActiveWeek(index)} >
                             {eachDayOfInterval({ start: startOfWeek(day), end: endOfWeek(day) }).map((day, index) => {
                                 return (
                                     <CalendarDay key={index} day={day} />
