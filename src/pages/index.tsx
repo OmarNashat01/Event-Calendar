@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import { MyMonthlyCalendar } from './calendar'
 import EventCalendar from '@/components/calendar'
 
 const inter = Inter({ subsets: ['latin'] })
