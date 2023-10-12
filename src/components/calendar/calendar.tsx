@@ -59,7 +59,7 @@ function EventCalendar() {
 
     return (
         <div className='bg-gray-400 w-full'>
-            <h1 className='w-full text-center text-3xl font-bold'>{format(currentMonth, 'MMMM')}</h1>
+            <h1 className='w-full text-center text-3xl font-bold'>{format(currentMonth, 'MMMM-yyyy')}</h1>
 
             <div className='w-full flex justify-between px-10'>
                 <button className='bg-slate-900 text-white p-2 m-2 rounded-lg' onClick={decrementMonth}>prev month</button>
