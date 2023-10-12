@@ -59,7 +59,13 @@ function EventCalendar() {
 
     return (
         <div className='bg-gray-400 w-full'>
-            {/* <h1>Event Calendar</h1> */}
+            <h1 className='w-full text-center text-3xl font-bold'>{format(currentMonth, 'MMMM')}</h1>
+
+            <div className='w-full flex justify-between px-10'>
+                <button className='bg-slate-900 text-white p-2 m-2 rounded-lg' onClick={decrementMonth}>prev month</button>
+                <button className='bg-slate-900 text-white p-2 m-2 rounded-lg' onClick={incrementMonth}>next month</button>
+            </div>
+
             <div className='grid grid-flow-row w-full p-8 '>
                 <div className='grid grid-cols-7 h-10 text-center mr-10 '>
                     {eachDayOfInterval({ start: startOfWeek(currentMonth), end: endOfWeek(currentMonth) }).map((day, index) => {
@@ -93,8 +99,6 @@ function EventCalendar() {
                     )
                 })}
             </div>
-            <button className='bg-slate-900 text-white p-2 m-2 rounded-lg' onClick={decrementMonth}>prev month</button>
-            <button className='bg-slate-900 text-white p-2 m-2 rounded-lg' onClick={incrementMonth}>next month</button>
         </div >
     )
 }
